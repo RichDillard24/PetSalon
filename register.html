@@ -19,14 +19,34 @@
 <main>
     <h2>Pet registration</h2>
     <div>
-        <label onclick="Petlist()">Pet Name:</label>
-        <input type="text">
+        <div class="input-control">
+            <label>Name:*</label>
+            <input type="text" id="txtName">
+        </div>
+        <div class="input-control">
+            <label>Age:</label>
+            <input type="number" id="txtAge">
+        </div>
+        <div class="input-control">
+            <label>Gender:</label>
+            <input type="text" id="txtGender">
+        </div>
+        <div class="input-control">
+            <label>Breed:*</label>
+            <input type="text" id="txtBreed">
+        </div>
+        <div class="input-control">
+            <label>Service:*</label>
+            <select id="txtService" >
+                <option value="" selected disabled>-- Select an option --</option>
+            </select>
+        </div>
+        
+        <div class="btn-container">
+            <button class="btn btn-primary" onclick= register()>Register</button>
+        </div>
     </div>
-    <div id="displayNames">
-
-
-    </div>
-
+   
 </main>
 
     
