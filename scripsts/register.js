@@ -1,77 +1,43 @@
 let petSalon={
     name: "Pet Salon",
     phone: 999-999-9999,
-    hours:{
+    hhours:{
         open:"9:00 am",
         close:"9:00 pm"
     },
-        pets:[]
+        pets:[
+            {
+                name:"steve",
+                age:4,
+                gender:"male",
+                service:"grooming",
+                breed: "corgi",
+            },
+            {
+                name:"jeff",
+                age: 1,
+                gender: "male",
+                service:"grooming",
+                breed:"lab",
+            },
+            {
+                name:"steve",
+                age: 1,
+                gender: "male",
+                service:"grooming",
+                breed:"golden retrevier"
+            }      
+        ] 
 }
-    function Pet(name,age,gender,breed,type,service){
-        this.name=name;
-        this.age=age;
-        this.gender=gender;
-        this.breed=breed;
-        this.type=type;
-        this.service=service;
-    }
-function isValid(aPet){
-    let validation =true;
+function displayNames(){
+    for(let i=0;i<3;i++){
+       names+=`<p> ${petSalon.pets[i].name}</p>`;
+    console.log(names);
 
-    if(aPet.name==""){
-        validation=false;
-        document.getElementById("txtName").addclass("Alert-error");
+    document.getElementById("displayNames").innerHTML=names;
     }
-    if(aPet.service==""){
-        validation=false;
-        document.getElementById("txtService").addclass("Alert-error");
 }
-    return validation;
+function countPets(){
+    console.log(petSalon.pets.length);
 }
-function register(){
-    let inputName = document.getElementById("txtName").value;
-    let inputAge = document.getElementById("txtAge").value;
-    let inputGender = document.getElementById("txtGender").value;
-    let inputBreed= document.getElementById("txtBreed").value;
-    let inputType=document.getElementById("txtType").value;
-    let inputService = document.getElementById("txtService").value;
-
-    let newPet = new Pet(inputName,inputAge,inputGender,inputBreed,inputType,inputService);
-    if(isValid(newPet)){
-    petSalon.pets.push(newPet);
-    // displayCard() ;
-    diplayTotalPets();
-    displayRows();
-    displayDogsCount();
-    displayCatsCount();
-    displayOtherCount();
-    displayServiceCount();
-    displayVaccineCount();
-} 
-}
-function deletePet(index){
-    petSalon.pets.splice(index,1);
-    // displayCard();
-    displayRows();
-    diplayTotalPets();
-    displayDogsCount();
-    displayCatsCount();
-    displayOtherCount();
-    displayServiceCount();
-    displayVaccineCount(); 
-}
-  function init(){
-    let pet1 = new Pet("scooby",12,"male","corgi","dog","grooming");
-    let pet2 = new Pet("steve",3,"male","pug","dog","grooming");
-    petSalon.pets.push(pet1);
-    petSalon.pets.push(pet2);
-    // displayCard();
-    displayRows()
-    diplayTotalPets();
-    displayDogsCount();
-    displayCatsCount();
-    displayOtherCount();
-    displayServiceCount();
-    displayVaccineCount();
-  }
-window.onload=init;
+  
