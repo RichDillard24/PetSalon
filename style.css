@@ -20,8 +20,8 @@ h3{
 }
 img{
     position: absolute;
-    top: 380px;
-    left: 800px;
+    top: 715px;
+    left: 75px;
 }
 .bar{
     display: flex;
@@ -44,10 +44,18 @@ a{
     display: flex;
     flex-direction: row;
 }
-
+.flex-c p{
+    margin-right: 1rem;
+    font-size: medium;
+}
+.info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 /*header*/
 .site-init{
-    background-color: goldenrod;
+    background-color: rgb(32, 144, 218)  ;
     text-align: center;
     height: 200px;
 }
@@ -117,14 +125,17 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: 200px;
+    height: 100%;
     background-color:rgb(32, 144, 218) ;
-    margin-top: 50px;
+    margin-top:500px;
+    background-size: auto;
+  
+
 }
 .flex-ftr{
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+
   
 }
 .ftr{
@@ -132,3 +143,4 @@ a{
     flex-direction: row; 
     justify-content: space-around;
 }
+
